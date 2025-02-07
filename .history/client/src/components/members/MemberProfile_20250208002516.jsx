@@ -33,9 +33,7 @@ export default function MemberProfile() {
 
         // Fetch member profile from backend
         axios
-            .get(
-                `https://fweb-project-deployment.onrender.com/api/member/members/${userId}`
-            )
+            .get(`https://fweb-project-deployment.onrender.com/api/member/members/${userId}`)
             .then((res) => {
                 setProfile({
                     name: res.data.name,
@@ -113,7 +111,7 @@ export default function MemberProfile() {
                 <h4>School</h4>
                 <p>{profile.school}</p>
             </div>
-            <br></br>
+<br></br>
             {/* Change Password Section */}
 
             <div className="form-group mb-3">
