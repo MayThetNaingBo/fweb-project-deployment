@@ -1,6 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
-import bcryptjs from "bcryptjs";
+import bcrypt from "bcrypt";
 import crypto from "crypto";
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";

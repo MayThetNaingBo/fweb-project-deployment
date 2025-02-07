@@ -143,7 +143,7 @@ router.post("/signin", async (req, res) => {
         }
 
         // Check password
-        const isMatch = await bcryptjs.compare(password, member.password);
+        const isMatch = await bcrypt.compare(password, member.password);
         if (!isMatch) {
             console.error("Password mismatch for email:", normalizedEmail);
             return res
@@ -274,7 +274,7 @@ router.put("/change-password", async (req, res) => {
         }
 
         // Check if the current password is valid
-        const isPasswordValid = await bcryptjs.compare(
+        const isPasswordValid = await bcrypt.compare(
             currentPassword,
             member.password
         );
@@ -285,7 +285,7 @@ router.put("/change-password", async (req, res) => {
         }
 
         // Hash the new password
-        const hashedPassword = await bcryptjs.hash(newPassword, 10);
+        const hashedPassword = await bcrypt.hash(newPassword, 10);
 
         // Update the member's password
         member.password = hashedPassword;

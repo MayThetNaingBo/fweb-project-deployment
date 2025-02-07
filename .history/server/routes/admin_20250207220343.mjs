@@ -1,6 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
-import bcryptjs from "bcryptjs";
+import bcrypt from "bcrypt";
 import crypto from "crypto";
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
@@ -569,7 +569,7 @@ router.put("/profile/change-password", async (req, res) => {
         }
 
         // Hash the new password
-        const hashedPassword = await bcryptjs.hash(newPassword, 10);
+        const hashedPassword = await bcrypt.hash(newPassword, 10);
 
         // Update the admin's password
         admin.password = hashedPassword;

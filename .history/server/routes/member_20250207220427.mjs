@@ -285,7 +285,7 @@ router.put("/change-password", async (req, res) => {
         }
 
         // Hash the new password
-        const hashedPassword = await bcryptjs.hash(newPassword, 10);
+        const hashedPassword = await bcrypt.hash(newPassword, 10);
 
         // Update the member's password
         member.password = hashedPassword;
