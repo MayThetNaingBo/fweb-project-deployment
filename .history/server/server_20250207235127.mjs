@@ -12,7 +12,14 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(
+    cors({
+        origin: [
+            "https://67a62990902ea9361aac99fd--melodic-pegasus-baf65c.netlify.app/",
+        ],
+        credentials: true,
+    })
+);
 
 app.use(express.json());
 
