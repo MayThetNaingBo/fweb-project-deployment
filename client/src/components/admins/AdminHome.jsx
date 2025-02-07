@@ -40,7 +40,7 @@ export default function AdminHome() {
     const [memberToDelete, setMemberToDelete] = useState(null);
 
     useEffect(() => {
-        fetch("http://192.168.18.18:5050/api/admin/members")
+        fetch("https://fweb-project-deployment.onrender.com/api/admin/members")
             .then((res) => res.json())
             .then((data) => {
                 setMembers(data);
