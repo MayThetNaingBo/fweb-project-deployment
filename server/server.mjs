@@ -12,7 +12,12 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(
+    cors({
+        origin: ["https://melodic-pegasus-baf65c.netlify.app"], // Your Netlify domain
+        credentials: true, // If you need to allow credentials like cookies or auth headers
+    })
+);
 
 app.use(express.json());
 
