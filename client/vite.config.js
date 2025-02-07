@@ -8,4 +8,9 @@ export default defineConfig({
         host: "0.0.0.0", // Allows external access
         port: 5173, // Optional: specify the port
     },
+    build: {
+        rollupOptions: {
+            external: ["react-calendar"],
+        },
+    },
 });
