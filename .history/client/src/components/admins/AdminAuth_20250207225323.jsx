@@ -23,7 +23,7 @@ const AdminSignIn = () => {
         e.preventDefault();
         try {
             const response = await axios.post(
-                "https://fweb-project-deployment.onrender.com/api/admin/signin",
+                "https://fweb-project-deployment.onrender.com//api/admin/signin",
                 formData
             );
 

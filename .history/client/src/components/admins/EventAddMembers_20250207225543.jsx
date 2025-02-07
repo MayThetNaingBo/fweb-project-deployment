@@ -30,7 +30,7 @@ export default function SelectMembers() {
     const handleAddMember = async (memberId) => {
         try {
             const response = await fetch(
-                `https://fweb-project-deployment.onrender.com/api/admin/events/${id}/add-member`,
+                `http://192.168.18.18:5050/api/admin/events/${id}/add-member`,
                 {
                     method: "POST",
                     headers: {

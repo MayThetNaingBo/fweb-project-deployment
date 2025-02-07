@@ -65,7 +65,7 @@ export default function EventMembers() {
 
         try {
             const response = await fetch(
-                `https://fweb-project-deployment.onrender.com/api/admin/events/${id}/remove-member/${memberId}`,
+                `http://192.168.18.18:5050/api/admin/events/${id}/remove-member/${memberId}`,
                 {
                     method: "DELETE",
                 }

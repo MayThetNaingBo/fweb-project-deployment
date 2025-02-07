@@ -12,7 +12,13 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(
+    cors({
+        origin: ["http://localhost:3000"], // Adjust this to your local frontend server's port
+        credentials: true,
+    })
+);
+
 app.use(express.json());
 
 // MongoDB Connection
@@ -31,5 +37,5 @@ app.use("/api/public", publicRoutes);
 app.use("/api/member", memberRoutes);
 
 // Start Server
-const PORT = process.env.PORT || 5050; // Use Render's assigned port in production
+const PORT = process.env.PORT || 5050; // Use Render's port or default to 5050
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

@@ -37,7 +37,7 @@ export default function EditEvent() {
         const updatedEvent = { ...event };
         if (!updatedEvent.image) {
             updatedEvent.image = image =
-                "https://fweb-project-deployment.onrender.com/assets/NoImage.jpg"; // Default image URL
+                "http://192.168.18.18:5173/assets/NoImage.jpg"; // Default image URL
         }
 
         // Check if any changes were made
@@ -52,7 +52,7 @@ export default function EditEvent() {
 
         try {
             const response = await fetch(
-                `https://fweb-project-deployment.onrender.com/api/admin/update/events/${id}`,
+                `http://192.168.18.18:5050/api/admin/update/events/${id}`,
                 {
                     method: "PUT",
                     headers: {

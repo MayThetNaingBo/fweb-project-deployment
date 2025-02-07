@@ -45,7 +45,7 @@ export default function MemberEventDetails() {
         setLoading(true);
         try {
             const response = await fetch(
-                `https://fweb-project-deployment.onrender.com/api/member/events/${id}/register-request`,
+                `http://192.168.18.18:5050/api/member/events/${id}/register-request`,
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },

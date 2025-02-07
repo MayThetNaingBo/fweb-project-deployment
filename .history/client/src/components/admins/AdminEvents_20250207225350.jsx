@@ -25,7 +25,7 @@ export default function AdminEventList() {
         if (!eventToDelete) return;
         try {
             await fetch(
-                `https://fweb-project-deployment.onrender.com/api/admin/delete/events/${eventToDelete}`,
+                `http://192.168.18.18:5050/api/admin/delete/events/${eventToDelete}`,
                 {
                     method: "DELETE",
                 }

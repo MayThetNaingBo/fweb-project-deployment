@@ -18,7 +18,7 @@ export default function AddMember() {
         e.preventDefault();
         try {
             const response = await axios.post(
-                "https://fweb-project-deployment.onrender.com/api/admin/add/members",
+                "https://fweb-project-deployment.onrender.com//api/admin/add/members",
                 formData,
                 {
                     headers: {

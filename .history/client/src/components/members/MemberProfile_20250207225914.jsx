@@ -51,7 +51,7 @@ export default function MemberProfile() {
     const handleChangePassword = async () => {
         try {
             const response = await axios.put(
-                "https://fweb-project-deployment.onrender.com/api/member/change-password",
+                "http://192.168.18.18:5050/api/member/change-password",
                 {
                     email: profile.email, // Fetch email dynamically
                     currentPassword,

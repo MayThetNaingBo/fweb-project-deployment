@@ -31,5 +31,7 @@ app.use("/api/public", publicRoutes);
 app.use("/api/member", memberRoutes);
 
 // Start Server
-const PORT = process.env.PORT || 5050; // Use Render's assigned port in production
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const PORT = 5050;
+app.listen(PORT, () =>
+    console.log(`Server running at http://192.168.18.18:${PORT}`)
+);

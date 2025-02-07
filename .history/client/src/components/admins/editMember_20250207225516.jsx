@@ -45,7 +45,7 @@ export default function EditMember() {
         try {
             // Fetch original member data for comparison
             const originalMember = await fetch(
-                `https://fweb-project-deployment.onrender.com/api/admin/members/${id}`
+                `http://192.168.18.18:5050/api/admin/members/${id}`
             )
                 .then((res) => res.json())
                 .catch((err) => {
@@ -66,7 +66,7 @@ export default function EditMember() {
 
             // Send the update request
             const response = await fetch(
-                `https://fweb-project-deployment.onrender.com/api/admin/update/members/${id}`,
+                `http://192.168.18.18:5050/api/admin/update/members/${id}`,
                 {
                     method: "PUT",
                     headers: {

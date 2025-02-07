@@ -26,7 +26,7 @@ export default function RegistrationRequests() {
     const handleApprove = async (memberId) => {
         try {
             const response = await fetch(
-                `https://fweb-project-deployment.onrender.com/api/admin/event/${id}/approve-request`,
+                `http://192.168.18.18:5050/api/admin/event/${id}/approve-request`,
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
@@ -52,7 +52,7 @@ export default function RegistrationRequests() {
     const handleReject = async (memberId) => {
         try {
             const response = await fetch(
-                `https://fweb-project-deployment.onrender.com/api/admin/event/${id}/reject-request`,
+                `http://192.168.18.18:5050/api/admin/event/${id}/reject-request`,
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },

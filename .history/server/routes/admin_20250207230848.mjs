@@ -109,10 +109,7 @@ router.post("/signin", async (req, res) => {
             return res.status(400).json({ error: "Admin not found." });
         }
 
-        const isPasswordValid = await bcryptjs.compare(
-            password,
-            admin.password
-        );
+        const isPasswordValid = await bcryptjs.compare(password, admin.password);
         if (!isPasswordValid) {
             return res.status(400).json({ error: "Incorrect password." });
         }
@@ -166,7 +163,8 @@ router.post("/add/members", async (req, res) => {
 
         // Create a verification link
         // Create a verification link
-        const verificationLink = `https://fweb-project-deployment.onrender.com/member/create-password?token=${token}`;
+const verificationLink = `https://fweb-project-deployment.onrender.com/member/create-password?token=${token}`;
+
 
         // Email transporter configuration
         if (!process.env.EMAIL) {

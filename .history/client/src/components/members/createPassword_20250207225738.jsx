@@ -56,7 +56,7 @@ export default function CreatePassword() {
     
         try {
             const response = await axios.post(
-                "https://fweb-project-deployment.onrender.com/api/member/create-password",
+                "http://192.168.18.18:5050/api/member/create-password",
                 {
                     token,
                     password,

@@ -15,7 +15,7 @@ export default function SelectMembers() {
             .catch((err) => console.error("Error fetching members:", err));
 
         // Fetch event members
-        fetch(`https://fweb-project-deployment.onrender.com/api/admin/events/${id}/members`)
+        fetch(`http://192.168.18.18:5050/api/admin/events/${id}/members`)
             .then((res) => res.json())
             .then((data) => {
                 const addedIds = new Set(data.map((member) => member._id)); // Store added member IDs
@@ -30,7 +30,7 @@ export default function SelectMembers() {
     const handleAddMember = async (memberId) => {
         try {
             const response = await fetch(
-                `https://fweb-project-deployment.onrender.com/api/admin/events/${id}/add-member`,
+                `http://192.168.18.18:5050/api/admin/events/${id}/add-member`,
                 {
                     method: "POST",
                     headers: {

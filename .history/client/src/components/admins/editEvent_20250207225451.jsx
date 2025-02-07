@@ -52,7 +52,7 @@ export default function EditEvent() {
 
         try {
             const response = await fetch(
-                `https://fweb-project-deployment.onrender.com/api/admin/update/events/${id}`,
+                `http://192.168.18.18:5050/api/admin/update/events/${id}`,
                 {
                     method: "PUT",
                     headers: {
